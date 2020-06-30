@@ -9,14 +9,14 @@ $(() => {
     // Add conversions here
     const conversion = [
         // You can reference functions
-        { from: 'm', to: 'cm', convertFunc: fromMeterToCentimeter },
+        { from: 'brutto', to: 'netto', convertFunc: fromBruttoToNetto },
 
         // You can specify inline conversions
-        { from: 'cm', to: 'm', convertFunc: value => value / 100 },
+        { from: 'brutto', to: 'netto', convertFunc: value => value * 0.0000001 },
     ];
     
-    function fromMeterToCentimeter(value) {
-        return value * 100;
+    function fromBruttoToNetto(value) {
+        return value * 0.0000001;
     }
     // ============================================================================================
 
